@@ -31,7 +31,7 @@ TODO
 TODO
 
 ## Requirements
-PascalABC.NET is required to run the program.
+[PascalABC.NET](http://pascalabc.net/en/download) is required to run the program.
 
 ## Quick start
 1. Launch PascalABC.NET.
