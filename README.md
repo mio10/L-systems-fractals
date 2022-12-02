@@ -6,29 +6,44 @@ A small collection of programs that generate some of well-known fractals using a
 ### Dragon curve
 **L-system:**
 ```
-TODO
+variables : F G
+constants : + −
+start  : F
+rules  : (F → F+G), (G → F-G)
+angle  : 90°
+Here, F and G both mean "draw forward", + means "turn left by angle", and − means "turn right by angle".
 ```
 **Screenshot:**
 
-TODO
+![](thumbnail-dragon.png)
 
 ### Fractal plant
 **L-system:**
 ```
-TODO
+variables : X F
+constants : + − [ ]
+start  : X
+rules  : (X → F+[[X]-X]-F[-FX]+X), (F → FF)
+angle  : 25°
+Here, F means "draw forward", − means "turn right 25°", and + means "turn left 25°". X does not correspond to any drawing action and is used to control the evolution of the curve. The square bracket "[" corresponds to saving the current values for position and angle, which are restored when the corresponding "]" is executed.
 ```
 **Screenshot:**
 
-TODO
+![](thumbnail-plant.png)
 
 ### Gosper curve
 **L-system:**
 ```
-TODO
+angle : 60 degrees
+axiom : A
+replacement rules :
+  A → A-B--B+A++AA+B-
+  B → +A-BB--B-A++A+B
+In this case both A and B mean to move forward, + means to turn left 60 degrees and - means to turn right 60 degrees - using a "turtle"-style program such as Logo.
 ```
 **Screenshot:**
 
-TODO
+![](thumbnail-gosper.png)
 
 ## Requirements
 [PascalABC.NET](http://pascalabc.net/en/download) is required to run the program.
